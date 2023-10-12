@@ -1,0 +1,18 @@
+function reverseWords(sentence) {
+    // Split the input sentence into words
+    const words = sentence.split(' ');
+    
+    // Reverse each word and join them back into a sentence
+    const reversedSentence = words.map(word => {
+        // Reverse the characters of the word
+        const reversedWord = word.split('').reverse().join('');
+        return reversedWord;
+    }).join(' '); // Join the reversed words with space in between
+    
+    return reversedSentence;
+}
+
+// Example usage
+const inputSentence = prompt("Enter a sentence:"); // Prompt for user input
+const reversedSentence = reverseWords(inputSentence);
+console.log("Reversed Sentence: " + reversedSentence);
